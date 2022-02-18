@@ -1,6 +1,7 @@
 :root {
   --color-primary: #707070;
-  --color-secundary: #ffffff;
+  --color-secundary: #888888;
+  --color-third: #ffffff;
 }
 
 * {
@@ -13,14 +14,14 @@
 /* +++++++++++++++++++ HEADER +++++++++++++++++ */
 
 .header {
-  height: 500px;
+  height: 400px;
 }
 
 .header .background{
   background-color: var(--color-primary);
   height: 400px;
   width: 100vw;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 65%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 60%);
   position: absolute;
 }
 
@@ -33,7 +34,7 @@
 .header .title h1 {
   font-size: 40px;
   margin-bottom: 30px;
-  color: var(--color-secundary);
+  color: var(--color-third);
   text-align: center;  
 }
 
@@ -41,12 +42,12 @@
   font-weight: 300;
   font-size: 20px;
   padding-top: 55px;
-  color: var(--color-secundary);
+  color: var(--color-third);
   text-align: center;
 }
 
 .header .title p {
-  color: var(--color-secundary);
+  color: var(--color-third);
   text-align: center;
   font-size: 14px;
 }
@@ -64,7 +65,7 @@
   width: 160px;
   height: 40px;
   margin: 10px;
-  background-color: var(--color-secundary);
+  background-color: var(--color-third);
   color: #888888;
   border: 1px solid var(--color-primary);
   border-radius: 4px;
@@ -72,9 +73,46 @@
   box-shadow: 0px 1px 6px #00000029;
 }
 
+.header .buttons button a {
+  text-decoration: none;
+}
+
+/* ++++++++++++++++++ ABOUT ++++++++++++++++++++++*/
+
+.container {
+  color: var(--color-secundary);
+  width: 60%;
+  margin: 0 auto;
+}
+
+.container .form {
+  display: flex;
+}
+
+.container .form .text {
+  width: 60%;
+  margin-right: 60px;
+}
+
+.container .form .text h2 {
+  font-weight: 400;
+  font-size: 20px;
+  margin: 25px 0;
+}
+
+.container .form .text p {
+  font-size: 12px;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.container .form .input {
+  width: 40%;
+}
+
 /* ++++++++++++++++++ MOBILE ++++++++++++++++++++ */
 
-@media (max-width: 420px) {
+@media (max-width: 700px) {
 
   .header .title h1,
   .header .title h3, 
