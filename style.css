@@ -75,6 +75,7 @@
 
 .header .buttons button a {
   text-decoration: none;
+  color: var(--color-secundary);
 }
 
 /* ++++++++++++++++++ ABOUT ++++++++++++++++++++++*/
@@ -108,6 +109,27 @@
 
 .container .form .input {
   width: 40%;
+  margin-top: 20px;
+}
+
+.container .form .input .personal-data input {
+  width: 100%;
+  height: 30px;
+  margin: 5px 0 15px 0;
+}
+
+.container .form label {
+  font-size: 12px;
+}
+
+.container .form button {
+  width: 100%;
+  height: 30px;
+  color: var(--color-secundary);
+  background-color: white;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  margin-top: 15px;
 }
 
 /* ++++++++++++++++++ MOBILE ++++++++++++++++++++ */
@@ -129,4 +151,25 @@
   .header .buttons {
     flex-wrap: wrap;
   }
+
+  .container {
+    padding: 0 20px;
+    margin: auto;
+    width: 100%;
+  }
+
+  .container .form {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  .container .form .text {
+    margin-right: 0;
+  }
+
+  .container .form .text,
+  .container .form .input {
+    width: 100%;
+  } 
 }
