@@ -205,8 +205,67 @@
   border-radius: 4px;
 }
 
-.container .products-list button {
-  margin-top: 8px;
+.container .products-list .button {
+  margin-top: 52px;
+  width: 260px;
+  height: 39px;
+  color: var(--color-secundary);
+  background-color: white;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+}
+
+/* +++++++++++++++++++++++++++ SHARE ++++++++++++++++++++*/
+
+.container .share {
+  text-align: center;
+}
+
+.container .share hr {
+  border: 1px solid var(--color-secundary);
+  margin: 75px auto 50px auto;
+  padding: 0 50%;
+}
+
+.container .share h4 {
+  position: relative;
+  top: -60px;
+  width: 220px;
+  text-align: center;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.container .share p {
+  font-size: 14px;
+}
+
+.container .share .data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: left;
+  margin-top: 25px;
+}
+
+
+.container .share .data div {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .share label {
+  font-size: 12px;
+}
+
+.container .share input {
+  width: 340px;
+  height: 30px;
+  margin-top: 10px; 
+}
+
+.container .share button {
+  margin-top: 52px;
   width: 260px;
   height: 39px;
   color: var(--color-secundary);
