@@ -131,7 +131,7 @@
   width: 100%;
   height: 30px;
   color: var(--color-secundary);
-  background-color: white;
+  background-color: var(--color-third);
   border: 1px solid var(--color-primary);
   border-radius: 4px;
   margin-top: 15px;
@@ -156,7 +156,7 @@
   top: -60px;
   width: 220px;
   text-align: center;
-  background-color: white;
+  background-color: var(--color-third);
 }
 
 .container .products-list .products {
@@ -200,7 +200,7 @@
   width: 100%;
   height: 30px;
   color: var(--color-secundary);
-  background-color: white;
+  background-color: var(--color-third);
   border: 1px solid var(--color-primary);
   border-radius: 4px;
 }
@@ -210,7 +210,7 @@
   width: 260px;
   height: 39px;
   color: var(--color-secundary);
-  background-color: white;
+  background-color: var(--color-third);
   border: 1px solid var(--color-primary);
   border-radius: 4px;
 }
@@ -232,7 +232,7 @@
   top: -60px;
   width: 220px;
   text-align: center;
-  background-color: white;
+  background-color: var(--color-third);
   margin: 0 auto;
 }
 
@@ -269,9 +269,26 @@
   width: 260px;
   height: 39px;
   color: var(--color-secundary);
-  background-color: white;
+  background-color: var(--color-third);
   border: 1px solid var(--color-primary);
   border-radius: 4px;
+}
+
+/* ++++++++++++++++++++++ FOOTER ++++++++++++++++++ */
+
+footer {
+  background-color: var(--color-primary);
+  height: 400px;
+  width: 100vw;
+  clip-path: polygon(0% 50%, 100% 20%, 100% 100%, 0% 100%);
+  color: var(--color-third);
+  text-align: center;
+}
+
+footer p {
+  position: relative;
+  top: 60%;
+  font-size: 12px;
 }
 
 /* ++++++++++++++++++ MOBILE ++++++++++++++++++++ */
