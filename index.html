@@ -35,19 +35,19 @@
         </p>
       </div>
       <div class="input">
-        <form>
+        <form id="formUser">
           <div class="personal-data">
             <label>Seu nome:</label>
-            <input type="text">
+            <input type="text" name="name">
             <label>E-mail</label>
-            <input type="text">
+            <input type="email" name="email">
             <label>CPF:</label>
-            <input type="text">
+            <input type="text" name="cpf" pattern="[0-9]{11}" title="Digite um CPF válido">
           </div>
           <div class="gender">
-            <input type="radio">
+            <input type="radio" name="gender" value="masculino">
             <label>Masculino</label>
-            <input type="radio">
+            <input type="radio" name="gender" value="feminino">
             <label>Feminino</label>
           </div>
 
@@ -125,17 +125,21 @@
       <hr>
       <h4>Compartilhe a novidade</h4>
       <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
-      <div class="data">
-        <div>
-          <label>Nome do seu amigo:</label>
-          <input type="text">
+      <form class="data" id="formFriend">
+        <div class="box">
+          <div>
+            <label>Nome do seu amigo:</label>
+            <input type="text" name="friendName">
+          </div>
+          <div>
+            <label>E-mail:</label>
+            <input type="email" name="friendEmail">
+          </div>
         </div>
-        <div>
-          <label>E-mail:</label>
-          <input type="email">
-        </div>
-      </div>
-      <button>Enviar agora</button>
+        
+        <button type="submit">Enviar agora</button>
+        
+      </form>
     </div>
   </div>
   <footer>
@@ -143,5 +147,7 @@
     <p>Linx Impulse</p>
     <p>2022</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
