@@ -50,8 +50,6 @@ formUser.onsubmit = function(e) {
 
 let formFriend = document.querySelector('#formFriend')
 
-console.log(formFriend)
-
 formFriend.onsubmit = function (e) {
   e.preventDefault()
 
@@ -79,3 +77,51 @@ formFriend.onsubmit = function (e) {
     formFriend.submit()
   }
 }
+
+function transformJson(response) {
+  return response.json()
+}
+
+function createBoxes(data) {
+
+  const boxes = data.products
+  
+  let boxesFor = []
+
+  boxes.forEach(function(product){
+    boxesFor.push(
+      `
+        <div class="product">
+          <div>
+            <img src=${product.image}>
+          </div>
+          <div>
+            <h6>${product.name}</h6>
+            <p>${product.description}</p>
+            <span>De R$ ${product.oldPrice}</span>
+            <h5>Por R$ ${product.price}</h5>
+            <span>ou ${product.installments.count} x de R$ ${product.installments.value}</span>
+            <button>Comprar</button>
+          </div>
+        </div>
+      `)
+  })
+
+  document.querySelector('.products').innerHTML = boxesFor.join('')
+
+  
+}
+
+const buttonProducts = document.querySelector('#button')
+const nextProducts = document.querySelector('#nextProducts')
+
+let url = 'https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1'
+
+ 
+fetch(url)
+  .then(transformJson)
+  .then(createBoxes)
+
+  buttonProducts.addEventListener('click', () => {
+    nextProducts.href = data.nextPage
+  })
